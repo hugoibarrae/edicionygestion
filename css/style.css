@@ -1,0 +1,10 @@
+@font-face{ 
+  font-family: 'MyWebFont';
+  src: url('bootstrap-icons.woff') format('woff');
+  src: url('bootstrap-icons.woff2') format('woff2');
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
