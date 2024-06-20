@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VR Google Viewer</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <!-- <link href="../style.css" rel="stylesheet" type="text/css"> -->
+    
+<script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
+
+
+
+<script>
+  
+  VRView.on('click', function(event) {
+  if (event.id == myHotspotId) {
+    // Handle hotspot click.
+  }
+});
+</script>
+
+
+
+
+
+  </head>
+  <body>
+
+visor de google
+
+
+
+<div id='vrview'></div>
+
+
+<script >
+  
+window.addEventListener('load', onVrViewLoad);
+
+function onVrViewLoad() {
+  // Selector '#vrview' finds element with id 'vrview'.
+  var vrView = new VRView.Player('#vrview', {
+    image: 'https://hugoibarrae.github.io/edicionygestion/image.jpg',
+    is_stereo: false,
+    height: '600',
+    width: '90%'
+  });
+}
+
+
+</script>
+
+
+
+
+
+<script >
+  vrView.addHotspot('dining-room', {
+  pitch: 0, // In degrees. Up is positive.
+  yaw: 40, // In degrees. To the right is positive.
+  radius: 2, // Radius of the circular target in meters.
+  distance: 2 // Distance of target from camera in meters.
+});
+</script>
+
+
+<script>
+  
+vrView.on('click', function(event) {
+  if (event.id == myHotspotId) {
+    // Handle hotspot click.
+  }
+});
+
+</script>
+
+
+  </body>
+</html>
